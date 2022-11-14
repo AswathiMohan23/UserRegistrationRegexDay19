@@ -63,7 +63,7 @@ public class UserRegistration {
     private static void isValidPassword() {
         System.out.println("\n\n========================================== UC5 ===============================================\n");
         boolean result = false;
-        String password="abcdefghijk";
+        String password="Abcdefghijk";
         String regex="[A-Za-z]{8,}";
         Pattern pattern=Pattern.compile(regex);
         for(int i=0;i<password.length();i++){
