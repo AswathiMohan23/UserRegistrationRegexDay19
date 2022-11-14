@@ -28,11 +28,7 @@ public class UserRegistration {
         for(int i=0;i<name.length();i++){
             Matcher matcher=pattern.matcher(name);
             result=matcher.matches();
-
         }
-
-
-
         return result;
     }
 
