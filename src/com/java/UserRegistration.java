@@ -13,15 +13,15 @@ public class UserRegistration {
 
     private static void isValidFirstName() {
         System.out.println("======================================= UC1 ===========================");
-        boolean result = isNameValid("Harry");
+        boolean result = nameValidation("Harry");
         System.out.println("\nthe first name is =====>>>>>  "+result);
     }
     private static void isValidSecondName() {
         System.out.println("\n======================================= UC2 ===========================");
-        boolean result = isNameValid("Potter");
+        boolean result = nameValidation("Potter");
         System.out.println("\nthe second name is =====>>>>>  "+result);
     }
-    private static boolean isNameValid(String name){
+    private static boolean nameValidation(String name){
         boolean result=false;
         String regex="[A-Z]{1}[a-z]{3,}";// {3,} means above 3
         Pattern pattern=Pattern.compile(regex);
