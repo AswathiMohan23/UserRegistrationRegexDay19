@@ -17,7 +17,7 @@ public class UserRegistration {
 
     private static void removingTheAddedMailId() {
         System.out.println("\n========================================== UC9 ===============================================\n");
-        System.out.println("removing email : ");
+        System.out.println("removing email : \n");
         System.out.println("list after removing the added mail id : "+list);
     }
 
@@ -47,24 +47,40 @@ public class UserRegistration {
     private static void isEmailValid(){
         System.out.println("\n\n========================================== UC3 ===============================================\n");
         boolean result ;
-        String email1="abcd_123@gmail.com";
-        String email2="qwe123ty@abcd.com";
-        String email3="xy%zacd@gmail.com";
-        list.add(email1);
-        list.add(email2);
-        list.add(email3);
+        /*String email1="abc@yahoo.com";
+        String email2="abc-100@yahoo.com";
+        String email3="abc111@abc.com";
+        String email4="abc.100@yahoo.com";
+        String email5="abc-100@abc.net";
+        String email6="abc.100@abc.com.au";
+        String email7="abc@1.com";
+        String email8="abc@gmail.com.com";
+        String email9="abc+100@gmail.com";*/
+
+        list.add("abc@yahoo.com");
+        list.add("abc-100@yahoo.com");
+        list.add("abc111@abc.com");
+        list.add("abc.100@yahoo.com");
+        list.add("abc-100@abc.net");
+        list.add("abc.100@abc.com.au");
+        list.add("abc@1.com");
+        list.add("abc@gmail.com.com");
+        list.add("abc+100@gmail.com");
 
         String regex="^[a-z0-9+_.-]+@+[a-z]+.+[a-z]";
         Pattern pattern=Pattern.compile(regex);
-        for(int i=0;i<list.size();i++){
+        for(int i=3;i<list.size();i++){
             Matcher matcher=pattern.matcher(list.get(i));
             result=matcher.matches();
             System.out.println("The email "+list.get(i)+" is  =====>>>> "+result);
         }
-        list.remove(email1);
-        list.remove(email2);
-        list.remove(email3);
+        for(int i=list.size()-1;i>1;i--){
+            list.remove(i);
+        }
     }
+
+
+
 
     private static void isValidPhoneNumber() {
         System.out.println("\n\n========================================== UC4 ===============================================\n");
