@@ -63,8 +63,12 @@ public class UserRegistration {
     private static void isValidPassword() {
         System.out.println("\n\n=========================================== UC5 ===============================================\n");
         boolean result = false;
-        String password="Abcde123";
-        String regex="[A-Za-z0-9]{8,}";
+        String password="aAbcd@#1234";
+
+        //  (?=.*?[A-Z]) ---> atleast 1 uppercase;    (?=.*?[a-z]) ----> atleast 1 lower case;
+        //  (?=.*?[0-9]) ----> atleast 1 digit;        (?=.*?[#?!@$%^&*-]) ----> atleast 1 special character
+
+        String regex="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
         Pattern pattern=Pattern.compile(regex);
         for(int i=0;i<password.length();i++){
             Matcher matcher=pattern.matcher(password);
