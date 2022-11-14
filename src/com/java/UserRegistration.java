@@ -10,6 +10,7 @@ public class UserRegistration {
         isValidFirstName();
         isValidSecondName();
         isEmailValid();
+        idValidPhoneNumber();
     }
 
     private static void isValidFirstName() {
@@ -36,13 +37,27 @@ public class UserRegistration {
         System.out.println("\n\n========================================== UC3 ===============================================\n");
         boolean result = false;
         String email="abcd_123@gmail.com";
-        String regex="^[a-z0-9+_.-]+@+[a-z]+.+[a-z]";// {3,} means above 3
+        String regex="^[a-z0-9+_.-]+@+[a-z]+.+[a-z]";
         Pattern pattern=Pattern.compile(regex);
         for(int i=0;i<email.length();i++){
             Matcher matcher=pattern.matcher(email);
             result=matcher.matches();
         }
         System.out.println("The email is  =====>>>> "+result);
+    }
+
+    private static void idValidPhoneNumber() {
+        System.out.println("\n\n========================================== UC4 ===============================================\n");
+        boolean result = false;
+        String phoneNumber="91 9734567892";
+        String regex="[91]+() +[789][0-9]{9}";
+        Pattern pattern=Pattern.compile(regex);
+        for(int i=0;i<phoneNumber.length();i++){
+            Matcher matcher=pattern.matcher(phoneNumber);
+            result=matcher.matches();
+        }
+        System.out.println("The phone number is  =====>>>> "+result);
+    }
 
     }
-}
+
