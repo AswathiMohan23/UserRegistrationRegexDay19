@@ -13,12 +13,12 @@ public class UserRegistration {
     }
 
     private static void isValidFirstName() {
-        System.out.println("======================================= UC1 ===========================");
+        System.out.println("\n\n========================================== UC1 ===============================================\n");
         boolean result = nameValidation("Harry");
         System.out.println("\nthe first name is =====>>>>>  "+result);
     }
     private static void isValidSecondName() {
-        System.out.println("\n======================================= UC2 ===========================");
+        System.out.println("\n\n========================================== UC2 ===============================================\n");
         boolean result = nameValidation("Potter");
         System.out.println("\nthe second name is =====>>>>>  "+result);
     }
