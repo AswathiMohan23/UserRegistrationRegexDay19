@@ -8,13 +8,18 @@ public class UserRegistration {
     static ArrayList<String> list=new ArrayList<>();
     public static void main(String[] args){
         isValidFirstName();
+        isValidSecondName();
     }
 
     private static void isValidFirstName() {
         System.out.println("======================================= UC1 ===========================");
-        String firstName="Harry";
-        boolean result = isNameValid(firstName);
+        boolean result = isNameValid("Harry");
         System.out.println("\nthe first name is =====>>>>>  "+result);
+    }
+    private static void isValidSecondName() {
+        System.out.println("\n======================================= UC2 ===========================");
+        boolean result = isNameValid("Potter");
+        System.out.println("\nthe second name is =====>>>>>  "+result);
     }
     private static boolean isNameValid(String name){
         boolean result=false;
