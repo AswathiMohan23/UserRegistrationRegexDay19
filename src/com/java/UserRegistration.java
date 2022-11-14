@@ -9,6 +9,7 @@ public class UserRegistration {
     public static void main(String[] args){
         isValidFirstName();
         isValidSecondName();
+        isEmailValid();
     }
 
     private static void isValidFirstName() {
@@ -31,5 +32,17 @@ public class UserRegistration {
         }
         return result;
     }
+    private static void isEmailValid(){
+        System.out.println("\n\n========================================== UC3 ===============================================\n");
+        boolean result = false;
+        String email="abcd_123@gmail.com";
+        String regex="^[a-z0-9+_.-]+@+[a-z]+.+[a-z]";// {3,} means above 3
+        Pattern pattern=Pattern.compile(regex);
+        for(int i=0;i<email.length();i++){
+            Matcher matcher=pattern.matcher(email);
+            result=matcher.matches();
+        }
+        System.out.println("The email is  =====>>>> "+result);
 
+    }
 }
