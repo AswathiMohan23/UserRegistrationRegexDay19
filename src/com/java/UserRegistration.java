@@ -61,7 +61,7 @@ public class UserRegistration {
         System.out.println("The phone number is  =====>>>> "+result);
     }
     private static void isValidPassword() {
-        System.out.println("\n\n========================================== UC5 ===============================================\n");
+        System.out.println("\n\n=========================================== UC5 ===============================================\n");
         boolean result = false;
         String password="Abcde123";
         String regex="[A-Za-z0-9]{8,}";
