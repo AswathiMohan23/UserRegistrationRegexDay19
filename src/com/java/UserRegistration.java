@@ -17,7 +17,7 @@ public class UserRegistration {
 
     private static void removingTheAddedMailId() {
         System.out.println("\n========================================== UC9 ===============================================\n");
-        System.out.println("removing email : \n");
+        System.out.println("removing email : ");
         System.out.println("list after removing the added mail id : "+list);
     }
 
