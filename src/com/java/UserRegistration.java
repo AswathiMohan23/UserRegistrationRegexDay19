@@ -10,7 +10,9 @@ public class UserRegistration {
         isValidFirstName();
         isValidSecondName();
         isEmailValid();
-        idValidPhoneNumber();
+        isValidPhoneNumber();
+        isValidPassword();
+
     }
 
     private static void isValidFirstName() {
@@ -46,7 +48,7 @@ public class UserRegistration {
         System.out.println("The email is  =====>>>> "+result);
     }
 
-    private static void idValidPhoneNumber() {
+    private static void isValidPhoneNumber() {
         System.out.println("\n\n========================================== UC4 ===============================================\n");
         boolean result = false;
         String phoneNumber="91 9734567892";
@@ -58,6 +60,20 @@ public class UserRegistration {
         }
         System.out.println("The phone number is  =====>>>> "+result);
     }
-
+    private static void isValidPassword() {
+        System.out.println("\n\n========================================== UC5 ===============================================\n");
+        boolean result = false;
+        String password="abcdefghijk";
+        String regex="[A-Za-z]{8,}";
+        Pattern pattern=Pattern.compile(regex);
+        for(int i=0;i<password.length();i++){
+            Matcher matcher=pattern.matcher(password);
+            result=matcher.matches();
+        }
+        System.out.println("The password is  =====>>>> "+result);
     }
+    }
+
+
+
 
